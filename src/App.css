@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.inner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-yellow {
+  background-color: #f7f6cf;
+}
+
+.bg-blue {
+  background-color: #b6d8f2;
+}
+
+.bg-pink {
+  background-color: #f4cfdf;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.custom-btn {
+  width: 240px;
+  height: 64px;
+  border: 2px solid #000;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  background: orange;
+  color: #000;
+  z-index: 1;
+}
+.arrow {
+  filter: invert(100%);
+}
+
+.custom-btn:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: #000;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover .arrow {
+  filter: invert(0);
+}
+.custom-btn:hover {
+  color: orange;
+}
+.custom-btn:hover:after {
+  left: 0;
+  width: 100%;
+}
